@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
 import '../common_widgets/homepage_container.dart';
+import 'handle_location_dashboart.dart';
 
 // ignore: use_key_in_widget_constructors
 class HomePage extends StatelessWidget {
@@ -33,11 +33,11 @@ class HomePage extends StatelessWidget {
         children: [
           Image.asset(
             'assets/location/1.jpg', // Change this to your image asset
-            height: 400,
+            height: 300,
           ),
           const SizedBox(height: 30.0),
           const Text(
-            'WELCOME TO EDUCATIONIST ',
+            'WELCOME TO TRAVEL GUIDE ',
             textAlign: TextAlign.center,
             style: TextStyle(
               fontSize: 35.0,
@@ -53,7 +53,7 @@ class HomePage extends StatelessWidget {
           //   ),
           // ),
           const Text(
-            'Digitalizing scholastic institutions to survive in this Internet era with a myraid of benifits to excel in academic as well as management.',
+            'Embark on a journey of discovery with our travel guide app! Uncover hidden gems, explore vibrant cultures, and create unforgettable memories.',
             textAlign: TextAlign.center,
             style: TextStyle(
                 fontSize: 15.0,
@@ -82,7 +82,7 @@ class HomePage extends StatelessWidget {
           const SizedBox(height: 16.0),
           CustomContainer(
             title:
-                "Life has a unique way of presenting us with hurdles and obstacles, but it is precisely these challenges that mold us into stronger, more resilient individuals. Don't be afraid of challenges; embrace them, for they are the stepping stones to success.",
+                "We believe in the transformative power of travel and aim to inspire wanderlust in every user. Our journey enthusiasts meticulously curate content to bring you the most enchanting destinations, ensuring that your travels are filled with wonder, authenticity, and adventure.",
             imagePath: 'assets/location/2.jpg',
             fontColor: Colors.black,
             bgColor: Colors.greenAccent,
@@ -98,7 +98,7 @@ class HomePage extends StatelessWidget {
           const SizedBox(height: 8.0),
           CustomContainer(
             title:
-                "Surround yourself with positivity, with people who uplift and inspire you. Remember that success is often a collaborative effort, and those who encourage you during your journey are invaluable. Build a support system that empowers you to reach new heights.",
+                "Backed by years of travel expertise, we pride ourselves on providing unparalleled insights into the world's most captivating destinations. Our team of seasoned globetrotters and local experts work tirelessly to bring you comprehensive guides, insider tips, and up-to-date information.",
             imagePath: 'assets/location/3.jpg',
             fontColor: Colors.white,
             bgColor: Colors.blue,
@@ -114,7 +114,7 @@ class HomePage extends StatelessWidget {
           const SizedBox(height: 8.0),
           CustomContainer(
             title:
-                "Take risks, for it is in those moments of uncertainty that we discover our true capabilities. Don't be afraid to step out of your comfort zone, for that's where magic happens. Growth lies in the willingness to face the unknown and to challenge the status quo.",
+                "Our user-friendly interface ensures easy navigation, while our carefully curated itineraries cater to various interests and preferences. Let us be your trusted companion as you explore the world, fostering connections, creating memories, and making every adventure a story worth telling.",
             imagePath: 'assets/location/4.jpg',
             fontColor: Colors.white,
             bgColor: Color.fromARGB(255, 26, 221, 149),
@@ -137,6 +137,10 @@ class HomePage extends StatelessWidget {
       padding: const EdgeInsets.all(16.0),
       child: ElevatedButton(
         onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => (HandleLocation())),
+          );
           // Handle sign-in button press
         },
         style: ElevatedButton.styleFrom(
@@ -149,7 +153,7 @@ class HomePage extends StatelessWidget {
               EdgeInsets.symmetric(horizontal: 20.0, vertical: 12.0), // Padding
         ),
         child: const Text(
-          'Sign In',
+          'Start your journey ',
           style: TextStyle(
             fontSize: 18.0,
             fontWeight: FontWeight.bold,
